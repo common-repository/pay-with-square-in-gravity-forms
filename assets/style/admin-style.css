@@ -1,0 +1,126 @@
+span#gform_payment_transaction_id {
+    word-wrap: break-word;
+}
+
+div#submitcomment p {
+    word-wrap: break-word;
+}
+
+div.gf_sqquare_saved_card_container {
+    display:none!important;
+}
+/* Define how SqPaymentForm iframes should look */
+input:hover, 
+input:focus, 
+input:active  {
+    outline:none!important;
+    box-shadow:none!important;
+}
+.single-element-configuration,
+.cardholder_name {
+    border: 1px solid #dfdfdf;
+    padding: 0 12px;
+    background: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    max-width: 500px;
+    color: #333;
+    min-height: 42px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+.single-element-configuration input[type="text"],
+.cardholder_name input[type="text"] {
+    border:none;
+    padding: 12px 0 12px 10px!important;
+    width: 100%;
+    outline:none!important;
+    background: #fff;
+    height: 44px;
+    width:100%!important;
+}
+.single-element-configuration > .element-toLeft > iframe.gfsq-input {
+    width: 100%;
+    max-width: 280px;
+    outline:none;
+    visibility: visible;
+    padding-left: 10px;
+}
+.single-element-configuration > .element-toRight > iframe.gfsq-input {
+    width: 100%;
+    max-width: 80px;
+    outline:none;
+    visibility: visible;
+}
+.element-toLeft {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.element-toRight {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.gfsq-ccard-container {
+    perspective: 1000px;
+}
+.gfsq-card {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+.gfsq-front,
+.gfsq-back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+/* if card is unknown*/
+.gfsq-front {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjJweCIgaGVpZ2h0PSIxNHB4IiB2aWV3Qm94PSIwIDAgMjIgMTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjIgKDY3MTQ1KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5Hcm91cDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJHcm91cCI+CiAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUiIGZpbGw9IiNEQ0RGRTYiIHg9IjAiIHk9IjAiIHdpZHRoPSIyMiIgaGVpZ2h0PSIxNCIgcng9IjIiPjwvcmVjdD4KICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0IyQjhDNiIgeD0iMyIgeT0iMTAiIHdpZHRoPSIzIiBoZWlnaHQ9IjEiPjwvcmVjdD4KICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZS1Db3B5IiBmaWxsPSIjQjJCOEM2IiB4PSI3IiB5PSIxMCIgd2lkdGg9IjMiIGhlaWdodD0iMSI+PC9yZWN0PgogICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLUNvcHktMiIgZmlsbD0iI0IyQjhDNiIgeD0iMTEiIHk9IjEwIiB3aWR0aD0iMyIgaGVpZ2h0PSIxIj48L3JlY3Q+CiAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtQ29weS0zIiBmaWxsPSIjQjJCOEM2IiB4PSIxNSIgeT0iMTAiIHdpZHRoPSIzIiBoZWlnaHQ9IjEiPjwvcmVjdD4KICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgZmlsbD0iI0ZGRkZGRiIgeD0iMyIgeT0iNCIgd2lkdGg9IjUiIGhlaWdodD0iMyI+PC9yZWN0PgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+) left / 24px no-repeat;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.gfsq-back {
+    background: url('../img/card_back.jpg') left / 24px no-repeat;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+/* if card is unknown*/
+
+.gfsq-domain-failed {
+    color: #ff0000;
+    margin-top: 15px;
+    display: inline-block;
+}
+label.gfsq-domain-verified[for="enable_applepay"]::after {
+    content: '(Domain verified)';
+    color: #24b324;
+    font-size: 12px;
+    font-weight: bold;
+}
+label.gfsq-domain-not-verified[for="enable_applepay"]::after {
+    content: '(Domain not verified)';
+    color: #ff0000;
+    font-size: 12px;
+    font-weight: bold;
+}
+.hide-noticed {
+    display: none!important;
+}
+table.gforms_form_settings.gfs_extra {
+    padding: 20px;
+}

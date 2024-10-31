@@ -1,0 +1,625 @@
+/* Define how SqPaymentForm iframes should look */
+::-webkit-input-placeholder { /* Edge */
+    color: #777!important;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #777!important;
+  }
+  
+  ::placeholder {
+    color: #777!important;
+  }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    background-color: transparent!important;    
+}
+.element-toLeft iframe, .element-toRight iframe {
+    z-index: 9!important;
+    margin: 0!important;
+}
+.single-element-configuration,
+.cardholder_name {
+    border: 1px solid #dfdfdf;
+    padding: 0 12px;
+    background: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    max-width: 500px;
+    color: #333;
+    max-height: 44px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.cardholder_name {
+    margin-top: 12px;
+    padding: 12px!important;
+}
+.cardholder_name > input[type="text"] {
+    border:none!important;
+    padding: 0!important;
+    width: 100%;
+    outline:none!important;
+    background: #fff!important;
+    font-size: 14px!important;
+    font-family: Arial!important;
+    box-shadow: none!important;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    -o-box-shadow: none!important;
+    -ms-box-shadow: none!important;
+}
+.single-element-configuration > .element-toLeft > iframe.gfsq-input {
+    width: 100%;
+    max-width: 280px;
+    outline:none;
+    visibility: visible;
+    padding-left: 10px;
+    min-height: 42px;
+}
+.single-element-configuration > .element-toRight > iframe.gfsq-input {
+    width: 100%;
+    max-width: 80px;
+    outline:none;
+    visibility: visible;
+    min-height: 42px;
+}
+.element-toLeft {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.element-toRight {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.gfsq-ccard-container {
+    perspective: 1000px;
+}
+.gfsq-card {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+.gfsq-front,
+.gfsq-back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+/* if card is unknown*/
+.gfsq-front {
+    background: url('../img/card/card-front.svg') left / 24px no-repeat;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.gfsq-back {
+    background: url('../img/card/card-back.svg') left / 24px no-repeat;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+/* if card is unknown*/
+
+/* if card is visa*/
+.gfsq-front.visa {
+    background: #fff url('../img/card/visa-front.svg') left / 24px no-repeat;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.gfsq-back.visa {
+    background: url('../img/card/visa-back.svg') left / 24px no-repeat;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+/* if card is visa*/
+
+/* if card is masterCard*/
+.gfsq-front.masterCard {
+    background: #fff url('../img/card/mastercard-front.svg') left / 24px no-repeat;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.gfsq-back.masterCard {
+    background: url('../img/card/mastercard-back.svg') left / 24px no-repeat;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+/* if card is masterCard*/
+
+/* if card is discover*/
+.gfsq-front.discover {
+    background: #fff url('../img/card/discover-front.svg') left / 24px no-repeat;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.gfsq-back.discover {
+    background: url('../img/card/discover-back.svg') left / 24px no-repeat;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+/* if card is discover*/
+
+/* if card is discoverDiners*/
+.gfsq-front.discoverDiners {
+    background: #fff url('../img/card/dinerclub-front.svg') left / 24px no-repeat;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.gfsq-back.discoverDiners {
+    background: url('../img/card/dinerclub-back.svg') left / 24px no-repeat;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+/* if card is discoverDiners*/
+
+/* if card is JCB*/
+.gfsq-front.JCB {
+    background: #fff url('../img/card/jcb-front.svg') left / 24px no-repeat;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.gfsq-back.JCB {
+    background: url('../img/card/jcb-back.svg') left / 24px no-repeat;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+/* if card is JCB*/
+
+/* if card is americanExpress*/
+.gfsq-front.americanExpress {
+    background: #fff url('../img/card/amex-front.svg') left / 24px no-repeat;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.gfsq-back.americanExpress {
+    background: url('../img/card/amex-back.svg') left / 24px no-repeat;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+/* if card is americanExpress*/
+
+/* if card is unionPay*/
+.gfsq-front.unionPay {
+    background: #fff url('../img/card/unionpay-front.svg') left / 24px no-repeat;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.gfsq-back.unionPay {
+    background: url('../img/card/unionpay-back.svg') left / 24px no-repeat;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+/* if card is unionPay*/
+
+.gfsq-card.rotate {
+    transform: rotateY(180deg);
+}
+/* Define how SqPaymentForm iframes should look when they have focus */
+.gfsq-input--focus {
+    outline: 5px auto rgb(59, 153, 252);
+}
+
+/* Define how SqPaymentForm iframes should look when they contain invalid values */
+.gfsq-input--error {
+    outline: 5px auto rgb(255, 97, 97);
+}
+
+.gf-square-field.date, 
+.gf-square-field.cvv {
+    float: left;
+    width: 49%;
+}
+
+.gf-square-field.date {
+    margin-right: 2%;
+}
+
+.gf_square_payment_toggler {
+    display: inline-block;
+    float: left;
+    margin-top: 6px;
+    margin-right: 6px;
+    outline: none!important;
+    cursor: pointer;
+}
+
+input[type="checkbox"]{
+    outline:none!important;
+}
+.gf-payment-activated {
+    display:block;
+    visibility: visible;
+}
+
+/*ul.gf-stored-cards {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+ul.gf-stored-cards > li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #fff url(../img/card.png) no-repeat center right 10px;
+    background-size: 120px;
+    cursor: pointer;
+}
+
+ul.gf-stored-cards > li > label {
+    cursor: pointer;
+}
+
+ul.gf-stored-cards > li.gf-selected {
+    background-color: #f7f7f7;
+}
+
+ul.gf-stored-cards > li:last-child {
+    border-bottom:none;
+}*/
+
+/*ul.gf-stored-cards > li > img {
+    max-width: 120px;
+}*/
+
+/* MAIN CREDIT CARD CONTAINER */
+
+.credit-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    width: 100%;
+    position: relative;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 4px 0 #cfd7df;
+    min-height: 50px;
+    padding: 5px 25px;
+    background: #1a1b1c;
+    color: #333;
+    max-width: 380px;
+    background-color: #fff;
+}
+
+.credit-card > input[type="radio"] {
+    position: absolute;
+    top: 11px;
+    left: 5px;
+}
+.credit-card.selectable:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+
+/*  NUMBER FORMATTING */
+
+.credit-card-last4 {
+    font-family: arial;
+    font-size: 12px;
+    display: block;
+}
+.credit-card-last4:before {
+    content: "**** **** **** ";
+    color: #333;
+    font-size: 12px;
+}
+.credit-card.selectable.gf-selected .credit-card-last4:before {
+    content: "**** **** **** ";
+    color: #fff!important;
+    font-size: 12px;
+}
+
+.credit-card-expiry {
+    font-family: arial;
+    font-size: 12px;
+}
+
+
+/* BRAND CUSTOMIZATION */
+
+.mastercard {
+    background: url('../img/card/mastercard-front.svg') no-repeat center right 10px;
+    background-size: 30px;
+}
+
+.visa {
+    background: url('../img/card/visa-front.svg') no-repeat center right 10px;
+    background-size: 30px;
+}
+
+.discover {
+    background: url('../img/card/discover-front.svg') no-repeat center right 10px;
+    background-size: 30px;
+}
+
+.discover_diners {
+    background: url('../img/card/dinerclub-front.svg') no-repeat center right 10px;
+    background-size: 30px;
+}
+
+.jcb {
+    background: url('../img/card/jcb-front.svg') no-repeat center right 10px;
+    background-size: 30px;
+}
+
+.american_express {
+    background: url('../img/card/amex-front.svg') no-repeat center right 10px;
+    background-size: 30px;
+}
+.credit-card.gf-selected {
+    background-color: #4862e2;
+    color: #eaeef2;
+}
+
+/*   LOGOS  */
+
+.credit-card::after {
+    content: " ";
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+/*.credit-card.visa::after {
+    height: 10px;
+    width: 32px;
+    background-size: 32px;
+    background-image: url('data:image/png;base64,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');
+}*/
+
+/* Indicates how Google Pay button will appear */
+.button-google-pay {
+    min-width: 200px;
+    min-height: 40px;
+    padding: 11px 24px;
+    margin: 10px 0;
+    background-color: #000!important;
+    background-image: url(data:image/svg+xml,%3Csvg%20width%3D%22103%22%20height%3D%2217%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M.148%202.976h3.766c.532%200%201.024.117%201.477.35.453.233.814.555%201.085.966.27.41.406.863.406%201.358%200%20.495-.124.924-.371%201.288s-.572.64-.973.826v.084c.504.177.912.471%201.225.882.313.41.469.891.469%201.442a2.6%202.6%200%200%201-.427%201.47c-.285.43-.667.763-1.148%201.001A3.5%203.5%200%200%201%204.082%2013H.148V2.976zm3.696%204.2c.448%200%20.81-.14%201.085-.42.275-.28.413-.602.413-.966s-.133-.684-.399-.959c-.266-.275-.614-.413-1.043-.413H1.716v2.758h2.128zm.238%204.368c.476%200%20.856-.15%201.141-.448.285-.299.427-.644.427-1.036%200-.401-.147-.749-.441-1.043-.294-.294-.688-.441-1.183-.441h-2.31v2.968h2.366zm5.379.903c-.453-.518-.679-1.239-.679-2.163V5.86h1.54v4.214c0%20.579.138%201.013.413%201.302.275.29.637.434%201.085.434.364%200%20.686-.096.966-.287.28-.191.495-.446.644-.763a2.37%202.37%200%200%200%20.224-1.022V5.86h1.54V13h-1.456v-.924h-.084c-.196.336-.5.611-.91.826-.41.215-.845.322-1.302.322-.868%200-1.528-.259-1.981-.777zm9.859.161L16.352%205.86h1.722l2.016%204.858h.056l1.96-4.858H23.8l-4.41%2010.164h-1.624l1.554-3.416zm8.266-6.748h1.666l1.442%205.11h.056l1.61-5.11h1.582l1.596%205.11h.056l1.442-5.11h1.638L36.392%2013h-1.624L33.13%207.876h-.042L31.464%2013h-1.596l-2.282-7.14zm12.379-1.337a1%201%200%200%201-.301-.735%201%201%200%200%201%20.301-.735%201%201%200%200%201%20.735-.301%201%201%200%200%201%20.735.301%201%201%200%200%201%20.301.735%201%201%200%200%201-.301.735%201%201%200%200%201-.735.301%201%201%200%200%201-.735-.301zM39.93%205.86h1.54V13h-1.54V5.86zm5.568%207.098a1.967%201.967%200%200%201-.686-.406c-.401-.401-.602-.947-.602-1.638V7.218h-1.246V5.86h1.246V3.844h1.54V5.86h1.736v1.358H45.75v3.36c0%20.383.075.653.224.812.14.187.383.28.728.28.159%200%20.299-.021.42-.063.121-.042.252-.11.392-.203v1.498c-.308.14-.681.21-1.12.21-.317%200-.616-.051-.896-.154zm3.678-9.982h1.54v2.73l-.07%201.092h.07c.205-.336.511-.614.917-.833.406-.22.842-.329%201.309-.329.868%200%201.53.254%201.988.763.457.509.686%201.202.686%202.079V13h-1.54V8.688c0-.541-.142-.947-.427-1.218-.285-.27-.656-.406-1.113-.406-.345%200-.656.098-.931.294a2.042%202.042%200%200%200-.651.777%202.297%202.297%200%200%200-.238%201.029V13h-1.54V2.976zm32.35-.341v4.083h2.518c.6%200%201.096-.202%201.488-.605.403-.402.605-.882.605-1.437%200-.544-.202-1.018-.605-1.422-.392-.413-.888-.62-1.488-.62h-2.518zm0%205.52v4.736h-1.504V1.198h3.99c1.013%200%201.873.337%202.582%201.012.72.675%201.08%201.497%201.08%202.466%200%20.991-.36%201.819-1.08%202.482-.697.665-1.559.996-2.583.996h-2.485v.001zm7.668%202.287c0%20.392.166.718.499.98.332.26.722.391%201.168.391.633%200%201.196-.234%201.692-.701.497-.469.744-1.019.744-1.65-.469-.37-1.123-.555-1.962-.555-.61%200-1.12.148-1.528.442-.409.294-.613.657-.613%201.093m1.946-5.815c1.112%200%201.989.297%202.633.89.642.594.964%201.408.964%202.442v4.932h-1.439v-1.11h-.065c-.622.914-1.45%201.372-2.486%201.372-.882%200-1.621-.262-2.215-.784-.594-.523-.891-1.176-.891-1.96%200-.828.313-1.486.94-1.976s1.463-.735%202.51-.735c.892%200%201.629.163%202.206.49v-.344c0-.522-.207-.966-.621-1.33a2.132%202.132%200%200%200-1.455-.547c-.84%200-1.504.353-1.995%201.062l-1.324-.834c.73-1.045%201.81-1.568%203.238-1.568m11.853.262l-5.02%2011.53H96.42l1.864-4.034-3.302-7.496h1.635l2.387%205.749h.032l2.322-5.75z%22%20fill%3D%22%23FFF%22%2F%3E%3Cpath%20d%3D%22M75.448%207.134c0-.473-.04-.93-.116-1.366h-6.344v2.588h3.634a3.11%203.11%200%200%201-1.344%202.042v1.68h2.169c1.27-1.17%202.001-2.9%202.001-4.944%22%20fill%3D%22%234285F4%22%2F%3E%3Cpath%20d%3D%22M68.988%2013.7c1.816%200%203.344-.595%204.459-1.621l-2.169-1.681c-.603.406-1.38.643-2.29.643-1.754%200-3.244-1.182-3.776-2.774h-2.234v1.731a6.728%206.728%200%200%200%206.01%203.703%22%20fill%3D%22%2334A853%22%2F%3E%3Cpath%20d%3D%22M65.212%208.267a4.034%204.034%200%200%201%200-2.572V3.964h-2.234a6.678%206.678%200%200%200-.717%203.017c0%201.085.26%202.11.717%203.017l2.234-1.731z%22%20fill%3D%22%23FABB05%22%2F%3E%3Cpath%20d%3D%22M68.988%202.921c.992%200%201.88.34%202.58%201.008v.001l1.92-1.918c-1.165-1.084-2.685-1.75-4.5-1.75a6.728%206.728%200%200%200-6.01%203.702l2.234%201.731c.532-1.592%202.022-2.774%203.776-2.774%22%20fill%3D%22%23E94235%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E);
+    background-origin: content-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.30), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    outline: 0;
+    cursor: pointer;
+    display: none;
+  }
+
+span.gfsqs-sep {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 16px!important;
+    color: #ddd!important;
+    text-align: center;
+    display: block;
+    max-width: 500px;
+}
+span.gfsqs-sep::after,
+span.gfsqs-sep::before {
+    content: "";
+    position: absolute;
+    max-width: 100%;
+    height: 1px;
+    border-top: 1px solid #ddd;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    margin: auto;
+}
+span.gfsqs-sep::after {
+    right: 0;
+}
+span.gfsqs-sep::before {
+    left: 0;
+}
+
+/* Customize the Apple Pay on the Web button */
+/* CSS */
+@supports (-webkit-appearance: -apple-pay-button) { 
+    .apple-pay-button {
+        display: none;
+        -webkit-appearance: -apple-pay-button;
+    }
+    .apple-pay-button-black {
+        -apple-pay-button-style: black;
+        background-color: #fff!important;
+    }
+    .apple-pay-button-white {
+        -apple-pay-button-style: white;
+        background-color: #000!important;
+    }
+    .apple-pay-button-white-with-line {
+        -apple-pay-button-style: white-outline;
+    }
+}
+
+@supports not (-webkit-appearance: -apple-pay-button) {
+    .apple-pay-button {
+        display: none;
+        background-size: 100% 60%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border-radius: 5px;
+        padding: 0px;
+        box-sizing: border-box;
+        min-width: 200px;
+        min-height: 32px;
+        max-height: 64px;
+    }
+    .apple-pay-button-black {
+        background-image: -webkit-named-image(apple-pay-logo-white);
+        background-color: #000000;
+    }
+    .apple-pay-button-white {
+        background-image: -webkit-named-image(apple-pay-logo-black);
+        background-color: #ffffff;
+    }
+    .apple-pay-button-white-with-line {
+        background-image: -webkit-named-image(apple-pay-logo-black);
+        background-color: #ffffff;
+        border: .5px solid #000000;
+    } 
+}
+
+/* Indicates how Masterpass button will appear */
+.button-masterpass {
+    min-width: 200px;
+    min-height: 40px;
+    max-height: 40px;
+    padding: 0;
+    margin: 10px;
+    background-color: black;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    border-color: rgb(255, 255, 255);
+    cursor:pointer;
+    display: none;
+}
+.gfsqs-digital-pay-wrapper {
+    display:none;
+    width: 100%;
+}
+
+/* delete card icon*/
+.gfsqs-trigger-btn {
+    position: absolute;
+    width: 40px;
+    display: inline-block;
+    right: 5px;
+    bottom: 7px;
+    cursor: pointer;
+    line-height: 1;
+}
+.trash-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #ff0000;
+    line-height: 1;
+}
+
+/** delete confirmation box**/
+#gfsqs-confirmation .modal-confirm {		
+	color: #636363;
+	width: 400px;
+}
+#gfsqs-confirmation .modal-confirm .modal-content {
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+	font-size: 14px;
+}
+#gfsqs-confirmation .modal-confirm .modal-header {
+	border-bottom: none;   
+	position: relative;
+}
+#gfsqs-confirmation .modal-confirm h4 {
+	text-align: center;
+	font-size: 26px;
+	margin: 30px 0 -10px;
+}
+#gfsqs-confirmation .modal-confirm .close {
+	position: absolute;
+	top: -5px;
+	right: -2px;
+}
+#gfsqs-confirmation .modal-confirm .modal-body {
+	color: #999;
+}
+#gfsqs-confirmation .modal-confirm .modal-footer {
+	border: none;
+	text-align: center;		
+	border-radius: 5px;
+	font-size: 13px;
+	padding: 10px 15px 25px;
+}
+#gfsqs-confirmation .modal-confirm .modal-footer a {
+	color: #999;
+}		
+#gfsqs-confirmation .modal-confirm .icon-box {
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	border-radius: 50%;
+	z-index: 9;
+	text-align: center;
+	border: 3px solid #f15e5e;
+}
+#gfsqs-confirmation .modal-confirm .icon-box i {
+	color: #f15e5e;
+	font-size: 46px;
+	display: inline-block;
+	margin-top: 13px;
+}
+#gfsqs-confirmation .modal-confirm .btn, #gfsqs-confirmation .modal-confirm .btn:active {
+	color: #fff;
+	border-radius: 4px;
+	background: #60c7c1;
+	text-decoration: none;
+	transition: all 0.4s;
+	line-height: normal;
+	min-width: 120px;
+	border: none;
+	min-height: 40px;
+	border-radius: 3px;
+	margin: 0 5px;
+}
+#gfsqs-confirmation .modal-confirm .btn-secondary {
+	background: #c1c1c1;
+}
+#gfsqs-confirmation .modal-confirm .btn-secondary:hover, #gfsqs-confirmation .modal-confirm .btn-secondary:focus {
+	background: #a8a8a8;
+}
+#gfsqs-confirmation .modal-confirm .btn-danger {
+	background: #f15e5e;
+}
+#gfsqs-confirmation .modal-confirm .btn-danger:hover, #gfsqs-confirmation .modal-confirm .btn-danger:focus {
+	background: #ee3535;
+}
+
+/*card fields on mobile devices*/
+
+@media screen and (max-width: 499px) {
+    .single-element-configuration {
+        display: inline-flex;
+        flex-direction: column;
+        max-height: max-content;
+    }
+    .element-toLeft {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+    .element-toRight {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
